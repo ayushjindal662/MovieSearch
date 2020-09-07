@@ -1,0 +1,17 @@
+<div class="head">
+  <span class="col-3">MovieSearcher</span>
+  <input class="form-control" class="col-7" type="text" placeholder="Search" aria-label="Search" #val>
+  <select class="col-2">
+    <option>movies</option>
+  </select>
+  <button  type="button" class="col-4" class="btn btn-secondary" (click)="getValue(val)">Search</button>
+</div>
+<div class="main">
+  <div class="border border-dark" class="card" style="width: 18.5rem;float:left;margin: 8px;margin-bottom: 15px;" *ngFor="let movies of lstmovies">
+    <img class="card-img-top" class="img-fluid" alt="Responsive image" [src]="movies.Poster"><br>
+    <div class="card-body">
+      <p class="card-title"style="text-align:center;">{{movies.Title}}</p>
+      <a href="#" class="btn btn-primary">Movie Detail</a>
+    </div>
+  </div>
+</div>
