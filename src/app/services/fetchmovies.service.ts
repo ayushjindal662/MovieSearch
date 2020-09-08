@@ -8,9 +8,9 @@ import { Movies } from '../classes/movies';
   providedIn: 'root'
 })
 export class FetchmoviesService {
-  lstmovies:Movies[];
+  listmovies: Movies[];
   constructor(private http: HttpClient) { }
-  getMovies(str:string): Observable<any> {
-    return this.http.get('http://www.omdbapi.com/?s='+str+'&apikey=56adc35');
+  getMovies(str: string): Observable<any> {
+    return this.http.get('http://www.omdbapi.com/?s=' + str + '&apikey=56adc35');
   }
 }

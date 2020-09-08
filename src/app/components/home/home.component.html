@@ -11,7 +11,8 @@
     <img class="card-img-top" class="img-fluid" alt="Responsive image" [src]="movies.Poster"><br>
     <div class="card-body">
       <p class="card-title"style="text-align:center;">{{movies.Title}}</p>
-      <a href="#" class="btn btn-primary">Movie Detail</a>
+      <a routerLink="/details/{{movies.imdbID}}" class="btn btn-primary">Movie Detail</a>
     </div>
   </div>
 </div>
+<!-- resources - https://getbootstrap.com/docs/4.0/components -->

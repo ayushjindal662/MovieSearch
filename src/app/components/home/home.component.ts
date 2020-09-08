@@ -10,13 +10,12 @@ import {Router} from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-str:any;
-lstmovies:Movies[];
-  constructor(private router:Router ,private fms:FetchmoviesService) { }
-getValue(val:any){
-  this.str =val.value;
-  this.fms.getMovies(this.str).subscribe(data=>{
-    this.lstmovies=data.Search;
+lstmovies: Movies[];
+  constructor(private router: Router , private fms: FetchmoviesService) { }
+getValue(val: any) {
+  this.fms.getMovies(val.value).subscribe(data => {
+    this.lstmovies = data.Search;
+    this.fms.listmovies = data.Search;
    });
 
 }
