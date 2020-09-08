@@ -11,6 +11,6 @@ export class FetchmoviesService {
   listmovies: Movies[];
   constructor(private http: HttpClient) { }
   getMovies(str: string): Observable<any> {
-    return this.http.get('http://www.omdbapi.com/?s=' + str + '&apikey=56adc35');
+    return this.http.get('https://www.omdbapi.com/?s=' + str + '&apikey=56adc35');
   }
 }
